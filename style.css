@@ -85,14 +85,14 @@ https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/
 }
 
 body {
-  background-color: var(--color-gray-5);
+  background-color: var(--color-gray-6);
   color: var(--color-gray-0);
   font-family: 'Open Sans', sans-serif;
 }
 @media screen and (prefers-color-scheme: light) {
   body {
-    background-color: white;
-    color: black;
+    background-color: var(--color-gray-6);
+    color: var(--color-gray-0);
   }
 }
 h1 {
@@ -182,8 +182,9 @@ table, th, td {
       opacity: 1;
     }
   }
-
+  
 /* Container 2 */
+
 .con-2 {
   flex-direction: column;
   justify-content: flex-start;
@@ -193,7 +194,9 @@ table, th, td {
   height: 0%;
   background: var(--color-yellow);
 }
+
 /* Container 4 */
+
 .con-4 {
   flex-direction: column-reverse;
   justify-content: flex-start;
@@ -203,10 +206,12 @@ table, th, td {
   height: 0%;
   background: var(--color-pink);
 }
+
 /* Vertical animation */
+
   .con-2:hover .top-down,
   .con-4:hover .bottom-up {
-    width: 100%;
+    height: 100%;
     animation: fill-verticaly 0.5s;
   }
   @keyframes fill-verticaly {
@@ -233,16 +238,47 @@ table, th, td {
   .con-finish:hover .to-right,
   .con-finish:hover .to-left {
     width: 50%;
-    animation: fill-out-in 0.5s;
+    animation: fill-out 0.5s;
   }
   
-  @keyframes fill-out-in {
+  @keyframes fill-out {
     0% {
       width: 0;
       opacity: 0;
     }
     100% {
       width: 50%;
+      opacity: 1;
+    }
+  }
+
+/* Center container */
+
+  .con-5 {
+    justify-content: center;
+    align-items: center;
+  }
+  .blow-out {
+    width: 0;
+    height: 0;
+    background: var(--color-purple);
+  }
+
+  .con-5:hover .blow-out {
+    width: 100%;
+    height: 100%;
+    animation: center-blow 0.5s;
+  }
+  
+  @keyframes center-blow {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
       opacity: 1;
     }
   }
