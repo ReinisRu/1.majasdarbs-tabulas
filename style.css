@@ -117,23 +117,30 @@ table, th, td {
 
   th, td {
     width: 33%;
-    height: 12vh;
-    padding: 15px;
+    height: 15vh;
+    padding: 0;
     text-align: center;
   }
 
-  .animation .to-left {
-    float: right;
-    height: 45px;
-    width: 0;
-    background: salmon;
+  .animation {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 100%;
   }
-  .animation .to-right {
-    display: inline-block;
-    height: 45px;
+
+  .to-left, .to-right {
     width: 0;
-    background: turquoise;
+    background: var(--color-light-red);
+    opacity: 1;
   }
+
+.finish {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  z-index: -1;
+}
   
   .animation:hover .to-right,
   .animation:hover .to-left {
@@ -144,8 +151,10 @@ table, th, td {
   @keyframes fill-horizontal {
     0% {
       width: 0;
+      opacity: 0;
     }
     100% {
       width: 50%;
+      opacity: 1;
     }
   }
