@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML CSS and Javascript tables</title>
+</head>
+
+<body>
+    <header>
+        <h1>1. Mājas darbs</h1>
+    </header>
+    <section>
+        <h1>HTML tabula ar CSS</h1>
+        <table>
+            <caption>Kustini peli</caption>
+            <tr>
+                <th>START</th>
+                <td>1</td>
+                <td rowspan="3">2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td colspan="2">5</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="animation">
+                    <div class="to-left">FIN</div>
+                    <div class="to-right">ISH</div>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <footer> &copy; Reinis Rūtentāls 2020</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
