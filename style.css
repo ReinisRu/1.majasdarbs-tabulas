@@ -87,7 +87,7 @@ https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/
 body {
   background-color: var(--color-gray-6);
   color: var(--color-gray-0);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 @media screen and (prefers-color-scheme: light) {
   body {
@@ -95,44 +95,51 @@ body {
     color: var(--color-gray-0);
   }
 }
-h2, h3 {
+h2,
+h3 {
   text-align: center;
 }
 
-header, section, footer {
+header,
+section,
+footer {
   width: 50%;
   min-width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
 }
-table, caption {
+table,
+caption {
   width: 100%;
 }
 
-table, th, td {
-    border: 1px solid var(--color-gray-0);
-    border-collapse: collapse;
-  }
+table,
+th,
+td {
+  border: 1px solid var(--color-gray-0);
+  border-collapse: collapse;
+}
 
-  th, td {
-    width: 33%;
-    height: 15vh;
-    padding: 0;
-    text-align: center;
-  }
+th,
+td {
+  width: 33%;
+  height: 15vh;
+  padding: 0;
+  text-align: center;
+}
 
 /* ALL Containers */
 .container {
-    display: flex;
-    position: relative;
-    height: 100%;
+  display: flex;
+  position: relative;
+  height: 100%;
 }
 .text-container {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 .fill-cont {
@@ -140,13 +147,13 @@ table, th, td {
 }
 
 /* START container */
-  .con-start {
-    justify-content: center;
-  }
-  .center-out {
-    width: 0%;
-    background: var(--color-blue);
-  }
+.con-start {
+  justify-content: center;
+}
+.center-out {
+  width: 0%;
+  background: var(--color-blue);
+}
 
 /* Container 1 */
 .con-1 {
@@ -166,23 +173,24 @@ table, th, td {
   background: var(--color-orange);
 }
 /* Horizontal animation */
-  .con-start:hover .center-out,
-  .con-1:hover .left-right,
-  .con-3:hover .right-left {
+.con-start:hover .center-out,
+.con-1:hover .left-right,
+.con-3:hover .right-left,
+.animation {
+  width: 100%;
+  animation: fill-horizontaly 0.5s;
+}
+@keyframes fill-horizontaly {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
     width: 100%;
-    animation: fill-horizontaly 0.5s;
+    opacity: 1;
   }
-  @keyframes fill-horizontaly {
-    0% {
-      width: 0;
-      opacity: 0;
-    }
-    100% {
-      width: 100%;
-      opacity: 1;
-    }
-  }
-  
+}
+
 /* Container 2 */
 
 .con-2 {
@@ -209,78 +217,82 @@ table, th, td {
 
 /* Vertical animation */
 
-  .con-2:hover .top-down,
-  .con-4:hover .bottom-up {
+.con-2:hover .top-down,
+.con-4:hover .bottom-up,
+.animation {
+  height: 100%;
+  animation: fill-verticaly 0.5s;
+}
+@keyframes fill-verticaly {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
     height: 100%;
-    animation: fill-verticaly 0.5s;
+    opacity: 1;
   }
-  @keyframes fill-verticaly {
-    0% {
-      height: 0;
-      opacity: 0;
-    }
-    100% {
-      height: 100%;
-      opacity: 1;
-    }
-  }
+}
 
 /* FINISH container */
 
-  .con-finish {
-    justify-content: space-between;
-  }
-  .to-left, .to-right {
-    width: 0;
-    background: var(--color-red);
-  }
+.con-finish {
+  justify-content: space-between;
+}
+.to-left,
+.to-right {
+  width: 0;
+  background: var(--color-red);
+}
 
-  .con-finish:hover .to-right,
-  .con-finish:hover .to-left {
+.con-finish:hover .to-right,
+.con-finish:hover .to-left,
+.animation {
+  width: 50%;
+  animation: fill-out 0.5s;
+}
+
+@keyframes fill-out {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
     width: 50%;
-    animation: fill-out 0.5s;
+    opacity: 1;
   }
-  
-  @keyframes fill-out {
-    0% {
-      width: 0;
-      opacity: 0;
-    }
-    100% {
-      width: 50%;
-      opacity: 1;
-    }
-  }
+}
 
 /* Center container */
 
-  .con-5 {
-    justify-content: center;
-    align-items: center;
-  }
-  .blow-out {
+.con-5 {
+  justify-content: center;
+  align-items: center;
+}
+.blow-out {
+  width: 0;
+  height: 0;
+  background: var(--color-purple);
+}
+
+.con-5:hover .blow-out,
+.animation {
+  width: 100%;
+  height: 100%;
+  animation: center-blow 0.5s;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+@keyframes center-blow {
+  0% {
     width: 0;
     height: 0;
-    background: var(--color-purple);
+    opacity: 0;
   }
-
-  .con-5:hover .blow-out {
+  100% {
     width: 100%;
     height: 100%;
-    animation: center-blow 0.5s;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;  
+    opacity: 1;
   }
-  
-  @keyframes center-blow {
-    0% {
-      width: 0;
-      height: 0;
-      opacity: 0;
-    }
-    100% {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-  }
+}
