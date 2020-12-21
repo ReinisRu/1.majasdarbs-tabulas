@@ -264,7 +264,7 @@ table, th, td {
     background: var(--color-purple);
   }
 
-  .touch {
+  .con-5:hover .blow-out {
     width: 100%;
     height: 100%;
     animation: center-blow 0.5s;
